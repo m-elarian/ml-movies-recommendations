@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.config["DEBUG"] = True
 api = Api(app)
 
-@app.route('/movies', methods=['GET'])
+@app.route('/popularMovies', methods=['GET'])
 def home():
    # Using readlines() 
    populrmovies = open('populrmovies.txt', 'r') 
