@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Machine Learning - Recoomendation movies system</h1>
+<br>
+<hr>
+<p>Popular Movies </p>
+<form action="/popularMoviesWithNames" id="form1">
+    <label for="fname"> Movies Count to show:</label>
+    <input type="text" id="movies_count" name="movies_count" value="10"><br>
+  <input type="submit" value="Popular Movies">
+</form>
+<br/>
+<hr>
+<p>get User Recommendations Movies </p>
+<form action="/getUserRecommendationsWithNames" id="form1">
+  <label for="fname"> User Id:</label>
+  <input type="text" id="movieUserId" name="movieUserId" value="1"><br><br>
+
+    <label for="fname"> IMDB Id:</label>
+  <input type="text" id="imdb_id" name="imdb_id" value="tt2293640"><br
+  <label for="fname"> Movies Count to show:</label>
+  <input type="text" id="movies_count" name="movies_count" value="10"><br><br>
+
+  <input type="submit" value="get User Recommendations Movies">
+</form>
+<hr>
+<br/>
+<p>Recommendations Movies </p>
+<form action="/bestMoviesRecommendationsWithNames" id="form1">
+
+    <label for="fname"> IMDB Id:</label>
+  <input type="text" id="imdb_id" name="imdb_id" value="tt2293640"><br>
+  <label for="fname"> Movies Count to show:</label>
+<input type="text" id="movies_count" name="movies_count" value="10"><br><br>
+  <input type="submit" value="get Recommendations Movies">
+</form>
+
+</body>
+</html>
