@@ -21,7 +21,10 @@ api = Api(app)
 
 #============================================================================================
 #============================================================================================
-
+@app.route('/',methods=["GET","POST"])
+def hello_world():
+    return 'movie recommendations'
+	
 @app.route('/popularMovies', methods=['GET'])
 def home():
     if 'movies_count' in request.args:
@@ -102,7 +105,7 @@ def bestMoviesRecommendations():
     # load numpy array from npy file
     from numpy import load
     # load array
-    cosine_sim_count = load('cosine_sim_count.npz')
+    cosine_sim_count = load('cosine_sim_count.npy')
         # Function that takes in movie imdb_id as input and outputs similar high rated movies based on metadata
 		
     def get_best_movies_metadata_recommendations(imdb_id, count):
@@ -217,5 +220,4 @@ def getUserRecommendations():
 	
 #============================================================================================
 #============================================================================================	
-if __name__ == '__main__':
-   app.run(debug=True)
+
