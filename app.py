@@ -106,6 +106,8 @@ def bestMoviesRecommendations():
     from numpy import load
     # load array
     cosine_sim_count = load('cosine_sim_count.npz')
+    cosine_sim_count = cosine_sim_count['arr_0']
+	
         # Function that takes in movie imdb_id as input and outputs similar high rated movies based on metadata
 		
     def get_best_movies_metadata_recommendations(imdb_id, count):
@@ -172,6 +174,7 @@ def getUserRecommendations():
     # load array
     #cosine_sim_word = load('cosine_sim_word.npy')
     cosine_sim_count = load('cosine_sim_count.npz')
+    cosine_sim_count = cosine_sim_count['arr_0']	
 
 
     # load array
